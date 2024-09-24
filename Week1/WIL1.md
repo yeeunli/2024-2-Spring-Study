@@ -15,6 +15,7 @@
 #### 💡 서버와 클라이언트 간의 소통 공간
 
 > 클라이언트: 데이터 생성, 조회, 수정, 삭제 **요청** 전송
+
 > 서버: 클라이언트의 요청에 대한 동작 수행 후 **응답** 전송
 
 ### 위의 과정을 컴퓨터가 어떻게 이해할까?
@@ -71,6 +72,7 @@ Application Programming Interface 즉, 어플리케이션의 사용 설명서
 #### 프론트는 백에게 어떤 요청을 보내올까?
 
 > 어떤 HTTP method, url을 사용해야 하는지
+
 > 각 요청에 대해 어떤 응답을 보내는지
 
 | REST API를 통해 ▶ url에는 조작할 데이터를, HTTP method에는 데이터에 대한 행위를 보내주면 됨!
@@ -80,25 +82,31 @@ Application Programming Interface 즉, 어플리케이션의 사용 설명서
 #### 유저 회원가입 / 로그인
 
 > POST /auth/signin
+
 > POST /auth/login
 
 #### 로그인한 유저의 할 일 생성 / 조회 / 수정 / 삭제
 
 > POST /todo
+
 > GET /todo
-> GET /todo/{todo_id}
+
 > PUT /todo/{todo_id}
+
 > DELETE /todo/{todo_id}
 
 #### 로그인한 유저의 할 일 체크 / 체크 해제
 
 > POST /todo/{todo_id}/check
+
 > POST /todo/{todo_id}/uncheck
 
 #### 친구 추가 / 친구 조회 / 친구 삭제
 
 > POST /friend
+
 > GET /friend
+
 > DELETE /friend/{friend_id}
 
 #### 특정 친구의 할 일 조회
@@ -108,5 +116,7 @@ Application Programming Interface 즉, 어플리케이션의 사용 설명서
 ---
 
 ## 이번 주차를 공부한 뒤 느낀점은❔
+
+🧸: 프로젝트 실행하면서 조금 더 해봤더니 white error page가 아니라 이전에 해놓았던 안녕하세요가 뜬다 ㅜㅜ
 
 🧸: 이전에 공부했던 내용들이 나와서 반가웠고, 프로젝트를 실제로 진행했을 때 경험했던 것들이 나와서 반가웠다. 항상 프론트엔드만 해와서 백엔드 개발이 어떠한지 궁금했었고 api 작성을 해보고 싶었는데 이번 기회에 할 수 있어서 좋았다. 앞으로의 공부가 기대된다. (●ˇ∀ˇ●)
