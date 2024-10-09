@@ -27,10 +27,10 @@ public class Todo {
     @ManyToOne(fetch = FetchType.LAZY) // todo 관점이니까 many가 먼저 나오겠지?
     private Member member; // 외래키 -> 외래키 필드를 그냥 넣어주면 끝!
 
-    public Todo(String content, boolean isChecked, User user) {
+    public Todo(String content, boolean isChecked, Member member) {
         this.content = content;
         this.isChecked=isChecked;
-        this.user = user;
+        this.member = member;
     }
 
 }
