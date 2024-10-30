@@ -33,4 +33,8 @@ public class Todo {
         this.member = member;
     }
 
+    public void updateContent(String newContent) {
+        this.content = newContent;
+    }
+
 }
