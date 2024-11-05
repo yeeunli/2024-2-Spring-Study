@@ -10,11 +10,13 @@ public class MemberRepository {
     @PersistenceContext
     private EntityManager em;
 
+    // 회원가입 (생성)
     public void save(Member member) {
         em.persist(member);
     }
 
-    // 회원가입 (생성)
-
     // 로그인 (조회)
+    public Member findById(Long id) {
+        return em.find(Member.class, id);
+    }
 }

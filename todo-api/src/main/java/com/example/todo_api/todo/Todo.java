@@ -5,11 +5,12 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.h2.engine.User;
 
 @Entity // 나는 entity다!!
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Getter
+@Getter @Setter
 public class Todo {
 
     @Id // 내가 pk다!!
@@ -27,9 +28,9 @@ public class Todo {
     @ManyToOne(fetch = FetchType.LAZY) // todo 관점이니까 many가 먼저 나오겠지?
     private Member member; // 외래키 -> 외래키 필드를 그냥 넣어주면 끝!
 
-    public Todo(String content, boolean isChecked, Member member) {
+    public Todo(Member member,String content) {
         this.content = content;
-        this.isChecked=isChecked;
+        this.isChecked = false;
         this.member = member;
     }
 
